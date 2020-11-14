@@ -91,7 +91,10 @@ humanActivityCols <- gsub("Mag", "Magnitude", humanActivityCols)
 humanActivityCols <- gsub("Freq", "Frequency", humanActivityCols)
 humanActivityCols <- gsub("mean", "Mean", humanActivityCols)
 humanActivityCols <- gsub("std", "StandardDeviation", humanActivityCols)
-# humanActivityCols <- gsub("BodyBody", "Body", humanActivityCols)
+
+humanActivityCols <- gsub("BodyBody", "Body", humanActivityCols)
+humanActivityCols <- gsub("Frequencyuency", "Frequency", humanActivityCols)
+
 
 # use new labels as column names
 colnames(humanActivity) <- humanActivityCols
@@ -106,5 +109,5 @@ humanActivityMeans <- humanActivity %>%
   summarise_each(funs(mean))
 
 # output to file "tidy_data.txt"
-write.table(humanActivityMeans, "tidy_data.txt", row.names = FALSE, 
+write.table(humanActivityMeans, "tidy_dataset.txt", row.names = FALSE, 
             quote = FALSE)
