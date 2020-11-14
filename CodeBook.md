@@ -4,10 +4,6 @@ author: "Jaume Ayerbe"
 date: "14/11/2020"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Code book for Coursera *Getting and Cleaning Data* course project
 
 The data set that this code book pertains to is located in the `tidy_dataset.txt` file of this repository.
